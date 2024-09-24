@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'Great Vibes'; /* Название шрифта */
+    src: url('fonts/GreatVibes-Regular.woff') format('woff'); /* Путь к шрифту */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    font-family: 'Great Vibes', Arial, sans-serif; /* Применяем шрифт Great Vibes */
+    padding: 0;
+}
+
+/* Шапка */
+.header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative; /* Относительное позиционирование для z-index */
+    z-index: 10; /* Шапка выше фона */
+}
+
+.header__list {
+    list-style: none;
+    display: flex;
+}
+
+.header__item {
+    position: relative;
+}
+
+.header__link {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.dropdown {
+    position: absolute;
+    display: none;
+    background-color: #444; /* Фон выпадающего меню */
+    list-style: none;
+    padding: 10px;
+    z-index: 11; /* Вложенное меню выше изображения */
+}
+
+.header__item:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    margin-bottom: 5px;
+}
+
+.dropdown a {
+    color: white; /* Цвет текста в выпадающем меню */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.dropdown a:hover {
+    color: #ccc; /* Изменяем цвет текста при наведении */
+}
+
+.header__logo img {
+    width: 50px; /* Ширина логотипа */
+    height: auto; /* Автоматически сохраняет пропорции */
+    display: block; /* Убирает лишние отступы */
+}
+
+/* Приветствие */
+.welcome-section {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-image: url('images/imgmain.jpg'); /* Фоновое изображение */
+    background-size: cover; /* Изображение полностью покрывает секцию */
+    background-position: center; /* Центрируем изображение */
+    width: 100%; /* Занимает всю ширину */
+    height: 100vh; /* Высота секции равна высоте окна браузера */
+    z-index: 1; /* Фон ниже шапки и меню */
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Текст поверх фонового изображения */
+    font-size: 2em; /* Увеличиваем текст в 4 раза */
+    font-weight: bold; /* Делаем текст жирным */
+    color: rgba(255, 255, 255, 0.94); /* Синий цвет текста */
+}
+
+
+.background-image {
+    display: none; 
+}
+
+/* Новости */
+.news-section {
+    padding: 20px;
+}
+
+.news-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news-item {
+    background-color: #f1f1f1;
+    padding: 15px;
+    width: 30%; /* Каждый блок новости занимает 30% ширины контейнера */
+    box-sizing: border-box; /* Учитываем padding при расчете ширины */
+}
+
+.news-item img {
+    width: 100%; /* Изображение растягивается по ширине блока */
+    height: 200px; /* Фиксированная высота для всех изображений */
+    object-fit: cover; /* Сохраняет пропорции изображения, обрезая при необходимости */
+}
+
+
+/* Галерея */
+.gallery-section {
+    padding: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.gallery-container img {
+    width: 200px;
+    margin-right: 10px;
+}
+
+/* Карта */
+.location-section {
+    padding: 20px;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: #ccc;
+}
+
+/* Подвал */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .news-container {
+        flex-direction: column;
+    }
+
+    .news-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .gallery-container {
+        flex-wrap: wrap;
+    }
+}

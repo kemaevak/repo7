@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хогвартс</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="header__logo">
+            <img src="images/11.jpg" alt="Логотип Хогвартс">
+        </div>
+        <nav class="header__nav">
+            <ul class="header__list">
+                <li class="header__item">
+                    <a class="header__link" href="#">Поступление</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Информация маглам</a></li>
+                        <li><a href="#">Информация магам</a></li>
+                        <li><a href="#">Учебные принадлежности</a></li>
+                        <li><a href="#">Как добраться</a></li>
+                    </ul>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="#">Факультеты</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Гриффиндор</a></li>
+                        <li><a href="#">Рейвенкло</a></li>
+                        <li><a href="#">Хаффлпафф</a></li>
+                        <li><a href="#">Слизерин</a></li>
+                    </ul>
+                </li>
+                <li class="header__item">
+                    <a class="header__link" href="#">Обучение</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Студенческие активности</a></li>
+                        <li><a href="#">Спорт</a></li>
+                        <li><a href="#">Международное сотрудничество</a></li>
+                        <li><a href="#">Предметы</a></li>
+                        <li><a href="#">Досуг</a></li>
+                    </ul>
+                </li>
+                <li class="header__item"><a class="header__link" href="#">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Приветствие на фоне картинки -->
+    <section class="welcome-section">
+        <div class="welcome-text">
+            <h1>Добро пожаловать в Хогвартс!</h1>
+            <p>Здесь начинается ваше волшебное приключение.</p>
+        </div>
+        <img src="images/imgmain.jpg" alt="Хогвартс" class="background-image">
+    </section>
+
+    <!-- Новости -->
+    <section class="news-section">
+        <h2>Новости</h2>
+        <div class="news-container">
+            <article class="news-item">
+                <h3>Победа Хогвартс в кубке по квиддич</h3>
+                <p>Алекс Клак забивает решающее очко, Хогвартс побеждает в кубке по квиддич между магическими школами.</p>
+                <img src="images/01.jpg" alt="Новость 1">
+            </article>
+            <article class="news-item">
+                <h3>Проблемы приведений</h3>
+                <p>Плакса Миртл снова довела до слез студента. Руководство Хогвартса решительно настроено ввести особые правила для приведений.</p>
+                <img src="images/02.jpg" alt="Новость 2">
+            </article>
+            <article class="news-item">
+                <h3>Сотрудничество с Колдостворцем</h3>
+                <p>В Хогвартсе появится новый предмет - магическая инженерия. Лучшие выпускники Колдостворца проведут пробные занятия.</p>
+                <img src="images/03.jpg" alt="Новость 3">
+            </article>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section class="gallery-section">
+        <h2>Галерея</h2>
+        <div class="gallery-container">
+            <img src="images/image5.jpg" alt="Галерея 1">
+            <img src="images/image2.jpg" alt="Галерея 2">
+            <img src="images/image3.jpg" alt="Галерея 3">
+            <img src="images/image4.jpg" alt="Галерея 4">
+            <img src="images/image7.jpg" alt="Галерея 5">
+        </div>
+    </section>
+
+    <!-- Карта с локацией -->
+    <section class="location-section">
+        <h2>Где находится Хогвартс?</h2>
+        <div id="map">
+            <!-- Ну как-нибудь в следующий раз, но пусть будет для др задания -->
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p>© 2024 Хогвартс. Все права защищены.</p>
+    </footer>
+
+     <!-- Подключение внешнего скрипта -->
+     <script src="script.js"></script>
+</body>
+</html>
